@@ -23,13 +23,13 @@
 
 업무 중 반복되는 작업과 오류가 생기는 지점을 찾고, 필요한 입력과 결과를 정의했습니다. AI를 활용해 구현하고 직접 사용·검증하며 개선했습니다. 화면 제작에 더해 권한, 알림, 사용 안내와 인수인계 절차도 함께 다뤘습니다.
 
-대시보드는 여러 담당자의 업무 화면을 연결합니다. 화면에 연결된 모든 업무와 개별 시스템을 혼자 만든 것으로 소개하지 않습니다.
+통합 화면 구성과 연결을 맡았으며, KPI·시재 등 일부 개별 업무 화면은 다른 담당자가 맡았습니다.
 
 ## 이렇게 둘러보세요
 
-1. **[업무 기록](https://poby-ya.github.io/hr-automation-portfolio/)**에서 맡은 업무와 개선 과정을 확인합니다.
-2. **[시트 자동화](https://poby-ya.github.io/hr-automation-portfolio/#automation)**에서 ‘자회사 인력현황 월간 수합’ 카드를 엽니다. 발견·정의·해결·효과와 이전·이후의 흐름을 볼 수 있습니다.
-3. **[대시보드](https://poby-ya.github.io/hr-automation-portfolio/#dashboard)**에서 화면 구성과 설계 의도를 살펴봅니다.
+1. [업무 기록](https://poby-ya.github.io/hr-automation-portfolio/)에서 맡은 업무와 개선 과정을 확인합니다.
+2. [시트 자동화](https://poby-ya.github.io/hr-automation-portfolio/#automation)에서 ‘자회사 인력현황 월간 수합’ 카드를 엽니다. 발견·정의·해결·효과와 이전·이후의 흐름을 볼 수 있습니다.
+3. [대시보드](https://poby-ya.github.io/hr-automation-portfolio/#dashboard)에서 화면 구성과 설계 의도를 살펴봅니다.
 
 웹브라우저에서 설치나 로그인 없이 열람할 수 있습니다. 실제 회사 시스템에 연결되지 않는 공개용 재현 화면입니다.
 
