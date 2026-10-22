@@ -505,69 +505,74 @@ select.km-sel,input.km-in{font-family:inherit; font-size:12.5px; padding:7px 10p
 
 <!-- ══════════════════ 탭 1 : 9개월 기록 ══════════════════ -->
 <div class="pf-panel" id="panel-story" role="tabpanel" aria-labelledby="tab-story">
-  <header class="mn-hero">
-    <div class="mn-wrap mn-hero-grid">
-      <div>
-        <p class="mn-eyebrow">카카오모빌리티 행성지원팀 · 2025.12 ~ 2026.08</p>
-        <h1 class="mn-h1">자회사 관리 업무<br>자동화 기록</h1>
-        <p class="mn-lead">자회사 13곳의 반복 업무를 자동화했습니다.<br>구현은 AI와 함께.</p>
-        <div class="mn-cta">
-          <button type="button" class="mn-btn mn-btn--dark" data-go="tab:dash">대시보드 보기</button>
-          <button type="button" class="mn-btn" data-go="tab:flow">자동화 사례 보기</button>
-        </div>
-      </div>
-      <div class="mn-art" aria-hidden="true"><svg viewBox="0 0 360 300" role="presentation" focusable="false">
-  <g class="art-orbit" fill="none" stroke="#191919" stroke-width="5" transform="rotate(-12 180 160)"><ellipse cx="180" cy="160" rx="150" ry="44"/></g>
-  <circle cx="180" cy="150" r="86" fill="#fff" stroke="#191919" stroke-width="5"/>
-  <path d="M108 128 Q180 110 252 128 M100 168 Q180 186 260 168" fill="none" stroke="#191919" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="152" cy="100" r="9" fill="#FEE500" stroke="#191919" stroke-width="4"/>
-  <g fill="none" stroke="#191919" stroke-width="5" transform="rotate(-12 180 160)"><path d="M30 160 A150 44 0 0 0 330 160"/></g>
-  <g class="art-car" transform="translate(262 186) rotate(-12)">
-    <rect x="-30" y="-14" width="60" height="22" rx="7" fill="#191919"/>
-    <rect x="-17" y="-28" width="34" height="18" rx="6" fill="#191919"/>
-    <rect x="-12" y="-24" width="11" height="10" rx="2" fill="#FEE500"/><rect x="2" y="-24" width="11" height="10" rx="2" fill="#FEE500"/>
-    <rect x="-7" y="-36" width="14" height="7" rx="2" fill="#fff" stroke="#191919" stroke-width="2.5"/>
-    <circle cx="-17" cy="9" r="7" fill="#fff" stroke="#191919" stroke-width="3.5"/><circle cx="17" cy="9" r="7" fill="#fff" stroke="#191919" stroke-width="3.5"/>
-  </g>
-  <circle cx="58" cy="62" r="14" fill="#fff" stroke="#191919" stroke-width="4"/>
-  <circle cx="318" cy="70" r="5" fill="#191919"/><circle cx="296" cy="36" r="3" fill="#191919"/><circle cx="34" cy="250" r="4" fill="#191919"/>
-</svg></div>
+  <!-- 두괄식: 결론(히어로) → 근거(대표 사례 3) → 증거물(대시보드) → 나머지 → 방식 → 범위 → 시간순. 누를수록 자세해진다 -->
+  <header class="lp-hero">
+    <div class="lp-wrap">
+      <p class="lp-eyebrow">카카오모빌리티 행성지원팀 · HR · 2025.12 ~ 2026.08</p>
+      <h1 class="lp-h1">자회사 13곳의 반복 업무를<br><span>사람 손에서</span> 뗐습니다.</h1>
+      <p class="lp-lead">노무 · 인건비 · 거버넌스 업무를 맡으며, 매달 사람이 모으고 대조하던 일을<br>직접 자동화했습니다. 구현은 AI와 함께, 판단은 직접 했습니다.</p>
+      <div class="lp-nums" id="wins"></div>
+      <p class="lp-hint"><span class="material-icons" aria-hidden="true">south</span>숫자를 누르면 어떻게 했는지 열립니다. 아래로 내릴수록 자세해집니다.</p>
     </div>
   </header>
 
-  <section class="bk-sec" aria-label="핵심 성과">
-    <div class="mn-wrap"><dl class="bk-wins" id="wins"></dl></div>
+  <section class="lp-sec" aria-labelledby="h-cases">
+    <div class="lp-wrap">
+      <p class="lp-kicker">대표 사례 3</p>
+      <h2 class="lp-h2" id="h-cases">문제를 직접 찾고, 숫자로 끝냈습니다.</h2>
+      <ol class="lp-cases" id="lpCases"></ol>
+    </div>
   </section>
 
-  <section class="bk-sec" aria-labelledby="h-pv">
-    <div class="mn-wrap">
-      <h2 class="mn-h2" id="h-pv">통합 대시보드</h2>
-      <div class="bk-pv" data-go="tab:dash">
-        <div class="bk-pv-frame" id="hubPreview" aria-hidden="true"></div>
-        <div class="bk-pv-txt">
-          <b>행성 통합 대시보드</b>
-          <ul class="dots">
-            <li>대시보드 8종 · 법인별 조직도 6종</li>
-            <li>권한 · 접속 기록 · 알림을 <mark class="hl">한곳에서 관리</mark></li>
-            <li>경영진 · 실장급 스탭 조직이 주로 사용</li>
-          </ul>
-          <button type="button" class="bk-pv-go" data-go="tab:dash">대시보드 열기</button>
-        </div>
+  <section class="lp-sec lp-sec--yellow" aria-labelledby="h-pv">
+    <div class="lp-wrap">
+      <p class="lp-kicker">통합 대시보드</p>
+      <div class="lp-pv-head">
+        <h2 class="lp-h2" id="h-pv">흩어진 업무 화면을<br>한 화면으로 모았습니다.</h2>
+        <button type="button" class="lp-btn" data-go="tab:dash">직접 눌러보기<span class="material-icons" aria-hidden="true">arrow_forward</span></button>
       </div>
+      <dl class="lp-facts">
+        <div><dt>화면</dt><dd>대시보드 8종 · 조직도 6종</dd></div>
+        <div><dt>주 사용자</dt><dd>경영진 · 실장급 스탭 조직</dd></div>
+        <div><dt>운영</dt><dd>권한 · 접속 기록 · 알림 · 업데이트 54회</dd></div>
+      </dl>
+      <div class="lp-pv" data-go="tab:dash">
+        <div class="bk-pv-frame" id="hubPreview" aria-hidden="true"></div>
+      </div>
+      <p class="lp-note">원본 화면 코드를 그대로 돌리고 데이터만 예시로 바꾼 재현본입니다.</p>
     </div>
   </section>
 
-  <section class="bk-sec" aria-labelledby="h-work">
-    <div class="mn-wrap">
-      <h2 class="mn-h2" id="h-work">맡은 업무</h2>
-      <div class="bk-work" id="workGrid"></div>
+  <section class="lp-sec" aria-labelledby="h-more">
+    <div class="lp-wrap">
+      <p class="lp-kicker">그 밖의 자동화 6</p>
+      <h2 class="lp-h2" id="h-more">매주 · 매달 돌아가는 일은<br>사람이 챙기지 않아도 되게.</h2>
+      <ul class="lp-list" id="lpList"></ul>
     </div>
   </section>
 
-  <section class="bk-sec" aria-labelledby="h-tl">
-    <div class="mn-wrap">
-      <h2 class="mn-h2" id="h-tl">9개월</h2>
-      <ol class="bk-phases" id="phases"></ol>
+  <section class="lp-sec lp-sec--wash" aria-labelledby="h-how">
+    <div class="lp-wrap">
+      <p class="lp-kicker">일하는 방식</p>
+      <h2 class="lp-h2" id="h-how">문제 정의는 직접, 구현은 AI와 함께.</h2>
+      <ol class="lp-how" id="howSteps"></ol>
+      <ul class="lp-guard" id="guardList" aria-label="지킨 원칙"></ul>
+    </div>
+  </section>
+
+  <section class="lp-sec" aria-labelledby="h-work">
+    <div class="lp-wrap">
+      <p class="lp-kicker">맡은 업무 6영역</p>
+      <h2 class="lp-h2" id="h-work">자동화는 맡은 일의 일부였습니다.</h2>
+      <div class="lp-work" id="workGrid"></div>
+    </div>
+  </section>
+
+  <section class="lp-sec" aria-labelledby="h-tl">
+    <div class="lp-wrap">
+      <p class="lp-kicker">9개월</p>
+      <h2 class="lp-h2" id="h-tl">파악에서 이관까지.</h2>
+      <ol class="lp-phases" id="phases"></ol>
       <details class="mn-more" id="tlMore">
         <summary>전체 업무 기록 보기</summary>
         <div class="st-filter" role="group" aria-label="업무 분야로 거르기" id="tlFilter"></div>
@@ -575,7 +580,7 @@ select.km-sel,input.km-in{font-family:inherit; font-size:12.5px; padding:7px 10p
       </details>
     </div>
   </section>
-  <footer class="mn-foot"><div class="mn-wrap">이름·법인·숫자는 포트폴리오용 예시입니다.</div></footer>
+  <footer class="lp-foot"><div class="lp-wrap">이름 · 법인 · 숫자는 포트폴리오용 예시입니다.</div></footer>
 </div>
 
 <!-- ══════════════════ 탭 2 : 대시보드 허브 ══════════════════ -->
@@ -1736,6 +1741,130 @@ body.show-intent [data-intent]::after{
 @media (max-width:420px){
   .pf-tab .material-icons{display:none}
 }
+
+/* ════════ 첫 탭 — 선형 랜딩 (PC 기준) ════════
+   검정 히어로(결론) → 흰 바탕(근거) → 노랑 띠(증거물) → 흰 바탕(나머지).
+   색은 노랑 · 검정 두 가지, 위계는 글자 크기로만. 모든 줄은 누르면 한 단계 더 자세해진다. */
+:root{ --lp-ink:#191919; --lp-dark:#111111; --lp-dark-2:#242424; --lp-dim:#a3a3a3; --lp-y:#FEE500; }
+.lp-wrap{max-width:1180px; margin:0 auto; padding-left:max(40px,env(safe-area-inset-left,0px)); padding-right:max(40px,env(safe-area-inset-right,0px))}
+#panel-story{background:#fff}
+#panel-story :focus-visible{outline:3px solid var(--lp-y); outline-offset:3px}
+
+.lp-hero{background:var(--lp-dark); color:#fff; padding-block:72px 40px}
+.lp-eyebrow{margin:0; font-size:15px; font-weight:700; color:var(--lp-dim); letter-spacing:-.01em}
+.lp-h1{margin:18px 0 0; font-weight:900; font-size:clamp(48px,6.2vw,84px); line-height:1.08; letter-spacing:-.055em; color:#fff; text-wrap:balance}
+.lp-h1 span{color:var(--lp-y)}
+.lp-lead{margin:26px 0 0; max-width:44em; font-size:19px; line-height:1.65; color:#d6d6d6; word-break:keep-all}
+.lp-nums{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin-top:56px; border-top:1px solid #333}
+.lp-num{all:unset; box-sizing:border-box; cursor:pointer; display:flex; flex-direction:column; gap:12px; padding:26px 24px 24px 0; min-width:0; transition:background .15s ease}
+.lp-num + .lp-num{padding-left:24px; border-left:1px solid #333}
+.lp-num:hover{background:var(--lp-dark-2)}
+.lp-num b{font-weight:900; font-size:clamp(48px,5vw,68px); line-height:1; letter-spacing:-.05em; color:var(--lp-y); font-variant-numeric:tabular-nums; white-space:nowrap}
+.lp-num b small{font-size:.36em; font-weight:800; margin-left:4px; letter-spacing:-.02em}
+.lp-num span{font-size:16px; font-weight:700; color:#fff; line-height:1.4; word-break:keep-all}
+.lp-num em{font-style:normal; font-size:13.5px; color:var(--lp-dim); display:flex; align-items:center; gap:4px}
+.lp-num em .material-icons{font-size:16px; transition:transform .15s ease}
+.lp-num:hover em{color:var(--lp-y)}
+.lp-num:hover em .material-icons{transform:translateX(3px)}
+.lp-hint{margin:28px 0 0; display:flex; align-items:center; gap:8px; font-size:14px; color:var(--lp-dim)}
+.lp-hint .material-icons{font-size:18px; color:var(--lp-y)}
+
+.lp-sec{padding-block:104px 0}
+.lp-sec:last-of-type{padding-bottom:96px}
+.lp-sec--yellow,.lp-sec--wash{padding-block:88px; margin-top:104px}
+.lp-sec--yellow{background:var(--lp-y)}
+.lp-sec--wash{background:#f5f5f5}
+.lp-sec--yellow + .lp-sec,.lp-sec--wash + .lp-sec{padding-top:104px}
+.lp-kicker{margin:0; display:inline-block; font-size:14px; font-weight:800; color:var(--lp-ink); padding:6px 12px; border-radius:999px; background:#f1f1f1}
+.lp-sec--yellow .lp-kicker{background:var(--lp-ink); color:var(--lp-y)}
+.lp-sec--wash .lp-kicker{background:#fff}
+.lp-h2{margin:18px 0 0; font-weight:900; font-size:clamp(34px,3.6vw,48px); line-height:1.18; letter-spacing:-.05em; color:var(--lp-ink); text-wrap:balance}
+
+/* 대표 사례: 숫자 | 결론 한 줄 + 문제 · 한 일 | 자세히 */
+.lp-cases{list-style:none; margin:48px 0 0; padding:0; border-top:2px solid var(--lp-ink)}
+.lp-case{display:grid; grid-template-columns:220px minmax(0,1fr) auto; gap:40px; align-items:center; padding:36px 0; border-bottom:1px solid #e6e6e6; cursor:pointer; transition:background .15s ease}
+.lp-case:hover{background:#fffbd6}
+.lp-case>b{font-weight:900; font-size:72px; line-height:1; letter-spacing:-.055em; color:var(--lp-ink); white-space:nowrap; padding-left:8px}
+.lp-case>b small{font-size:.34em; font-weight:800; margin-left:4px; letter-spacing:-.02em}
+.lp-case h3{margin:0; font-size:24px; font-weight:800; line-height:1.4; letter-spacing:-.04em; color:var(--lp-ink); word-break:keep-all}
+.lp-case dl{margin:14px 0 0; display:grid; grid-template-columns:auto minmax(0,1fr); gap:6px 14px; font-size:15.5px; line-height:1.6}
+.lp-case dt{font-weight:800; color:var(--lp-ink)}
+.lp-case dd{margin:0; color:#555; word-break:keep-all}
+.lp-more{all:unset; cursor:pointer; display:inline-flex; align-items:center; gap:6px; height:48px; padding:0 22px; margin-right:8px; border-radius:999px; background:var(--lp-ink); color:#fff; font-size:15px; font-weight:700; white-space:nowrap}
+.lp-more .material-icons{font-size:18px; color:var(--lp-y); transition:transform .15s ease}
+.lp-case:hover .lp-more .material-icons{transform:translateX(3px)}
+
+/* 대시보드 */
+.lp-pv-head{display:flex; align-items:flex-end; justify-content:space-between; gap:24px}
+.lp-btn{all:unset; cursor:pointer; flex:none; display:inline-flex; align-items:center; gap:8px; height:56px; padding:0 28px; border-radius:999px; background:var(--lp-ink); color:#fff; font-size:16px; font-weight:800}
+.lp-btn .material-icons{font-size:20px; color:var(--lp-y)}
+.lp-btn:hover{background:#000}
+.lp-facts{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0; margin:40px 0 28px; border-top:2px solid var(--lp-ink)}
+.lp-facts>div{padding:16px 20px 0 0}
+.lp-facts dt{font-size:13.5px; font-weight:800; color:var(--lp-ink); opacity:.65}
+.lp-facts dd{margin:6px 0 0; font-size:17px; font-weight:800; letter-spacing:-.03em; color:var(--lp-ink)}
+.lp-pv{cursor:pointer; border-radius:18px; overflow:hidden; background:#fff; border:3px solid var(--lp-ink); transition:transform .2s ease}
+.lp-pv:hover{transform:translateY(-4px)}
+.lp-pv .bk-pv-frame{border:0; border-radius:0}
+.lp-note{margin:16px 0 0; font-size:14px; color:var(--lp-ink); opacity:.7}
+
+/* 나머지 자동화: 한 줄씩 */
+.lp-list{list-style:none; margin:48px 0 0; padding:0; border-top:2px solid var(--lp-ink)}
+.lp-row{display:grid; grid-template-columns:minmax(0,1.1fr) 200px minmax(0,1.3fr) 24px; gap:24px; align-items:center; padding:22px 8px; border-bottom:1px solid #e6e6e6; cursor:pointer; transition:background .15s ease}
+.lp-row:hover{background:#fffbd6}
+.lp-row b{font-size:19px; font-weight:800; letter-spacing:-.035em; color:var(--lp-ink)}
+.lp-row .t{font-size:14px; color:#777}
+.lp-row .e{font-size:15.5px; color:#333; word-break:keep-all}
+.lp-row .material-icons{font-size:20px; color:#bbb; transition:transform .15s ease, color .15s ease}
+.lp-row:hover .material-icons{color:var(--lp-ink); transform:translateX(3px)}
+
+/* 일하는 방식 */
+.lp-how{list-style:none; margin:48px 0 0; padding:0; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; counter-reset:how}
+.lp-how li{position:relative; background:#fff; border-radius:20px; padding:28px 24px; min-width:0}
+.lp-how li.is-ai{background:var(--lp-ink); color:#fff}
+.lp-how li:not(:last-child)::after{content:'\2192'; position:absolute; right:-17px; top:50%; transform:translateY(-50%); z-index:1; width:22px; height:22px; display:grid; place-items:center; border-radius:50%; background:var(--lp-y); color:var(--lp-ink); font-weight:900; font-size:13px}
+.lp-how small{font-size:13px; font-weight:800; color:#888}
+.lp-how li.is-ai small{color:var(--lp-y)}
+.lp-how b{display:block; margin-top:6px; font-size:26px; font-weight:900; letter-spacing:-.04em}
+.lp-how p{margin:10px 0 0; font-size:15px; line-height:1.55; color:#555; word-break:keep-all}
+.lp-how li.is-ai p{color:#d6d6d6}
+.lp-guard{list-style:none; margin:20px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px}
+.lp-guard li{display:inline-flex; align-items:center; gap:6px; padding:9px 14px; border-radius:999px; background:#fff; font-size:14px; font-weight:700; color:#333}
+.lp-guard .material-icons{font-size:17px}
+
+/* 맡은 업무 */
+.lp-work{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:44px 40px; margin-top:48px}
+.lp-work section{padding-top:18px; border-top:2px solid var(--lp-ink); min-width:0}
+.lp-work h3{margin:0 0 12px; font-size:20px; font-weight:900; letter-spacing:-.04em; color:var(--lp-ink)}
+.lp-work ul{list-style:none; margin:0; padding:0; display:grid; gap:8px}
+.lp-work li{font-size:15.5px; line-height:1.5; color:#444; word-break:keep-all}
+.lp-work li[data-go]{cursor:pointer; text-decoration:underline; text-decoration-color:var(--lp-y); text-decoration-thickness:3px; text-underline-offset:4px}
+.lp-work li[data-go]:hover{color:var(--lp-ink)}
+
+/* 9개월 */
+.lp-phases{list-style:none; margin:48px 0 0; padding:0; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:20px}
+.lp-phases li{min-width:0; padding-top:16px; border-top:2px solid var(--lp-ink)}
+.lp-phases .w{font-size:13.5px; color:#888}
+.lp-phases b{display:block; margin-top:4px; font-size:22px; font-weight:900; letter-spacing:-.04em}
+.lp-phases p{margin:8px 0 0; font-size:15px; line-height:1.55; color:#444; word-break:keep-all}
+.lp-foot{padding-block:0 48px; font-size:13px; color:#888}
+
+/* 태블릿까지만 접는다 */
+@media (max-width:1000px){
+  .lp-nums{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lp-num:nth-child(3){padding-left:0; border-left:0}
+  .lp-num:nth-child(n+3){border-top:1px solid #333}
+  .lp-case{grid-template-columns:150px minmax(0,1fr); gap:24px}
+  .lp-case>b{font-size:52px}
+  .lp-case .lp-more{grid-column:2; justify-self:start}
+  .lp-row{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) 24px}
+  .lp-row .t{display:none}
+  .lp-how,.lp-work{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lp-how li:nth-child(2)::after{display:none}
+  .lp-phases{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .lp-pv-head{flex-direction:column; align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){ #panel-story *{transition:none!important} }
 </style>
 <script>
 "use strict";
@@ -2584,11 +2713,23 @@ function renderWeeks(){
   });
   $('#weekChart').innerHTML=s+'</svg>';
 }
+/* ── 첫 탭(선형): 대표 사례 3 = 결론 한 줄 + 문제 · 한 일, 나머지 6 = 한 줄씩 ── */
+const FEATURED=[
+ ['minutes-check','80<small>건</small>','의사록 기입 내용 1,700행을 대조해 오류 80건을 찾았습니다'],
+ ['hr-collect','5→1<small>단계</small>','법인 6곳 인력현황 보고, 수작업 5단계를 1단계로 줄였습니다'],
+ ['payroll','12<small>곳</small>','재무와 인사가 다르게 보던 인건비를 법인 12곳 한 표로 맞췄습니다']];
 function renderWins(){
-  $('#wins').innerHTML=WINS.filter((_,i)=>i<3).map(w=>`<div class="bk-win"><dt>${w.t}</dt><dd>${w.n.replace('<span class="arr">→</span>','→')}</dd></div>`).join('');
+  $('#wins').innerHTML=WINS.map(w=>`<button type="button" class="lp-num" data-go="${w.go}"><b>${w.n.replace('<span class="arr">→</span>','→')}</b>
+    <span>${w.t}</span><em>어떻게 했나<span class="material-icons" aria-hidden="true">arrow_forward</span></em></button>`).join('');
+  $('#lpCases').innerHTML=FEATURED.map(([id,n,head])=>{ const a=AUTOS.find(x=>x.id===id);
+    return `<li class="lp-case" role="button" tabindex="0" data-go="case:${id}" aria-label="${esc(a.title)} 자세히 보기"><b>${n}</b>
+      <div><h3>${head}</h3><dl><dt>문제</dt><dd>${a.define}</dd><dt>한 일</dt><dd>${a.solve[0]}</dd></dl></div>
+      <span class="lp-more">자세히<span class="material-icons" aria-hidden="true">arrow_forward</span></span></li>`; }).join('');
+  $('#lpList').innerHTML=AUTOS.filter(a=>!FEATURED.some(f=>f[0]===a.id)).map(a=>`<li class="lp-row" role="button" tabindex="0" data-go="case:${a.id}" aria-label="${esc(a.title)} 자세히 보기">
+    <b>${a.title}</b><span class="t">${a.trig}</span><span class="e">${a.effect[0]}</span><span class="material-icons" aria-hidden="true">arrow_forward</span></li>`).join('');
 }
 function renderWork(){
-  $('#workGrid').innerHTML=WORK.map(w=>`<section><h3>${w.t}</h3><ul class="dots">${w.items.slice(0,2).map(it=>`<li>${it[0]}</li>`).join('')}</ul></section>`).join('');
+  $('#workGrid').innerHTML=WORK.map(w=>`<section><h3>${w.t}</h3><ul>${w.items.map(it=>`<li${it[2]?` data-go="${it[2]}" role="button" tabindex="0"`:''}>${it[0]}</li>`).join('')}</ul></section>`).join('');
 }
 /* 첫 탭의 대시보드 미리보기: 실제 허브를 복제해 축소한다 — 그림을 따로 만들지 않는다 */
 function renderPreview(){
@@ -2604,8 +2745,7 @@ function renderPhases(){
   $('#phases').innerHTML=PHASES.map((ph,i)=>`<li><span class="w">${TIMELINE[i].when}</span><b>${TIMELINE[i].name}</b><p>${ph.keys[0][1]}</p></li>`).join('');
 }
 function renderHow(){
-  $('#howSteps').innerHTML=HOW.map((h,i)=>`<li${h[3]?' class="is-ai"':''}><span class="how-ic"><span class="material-icons" aria-hidden="true">${h[1]}</span></span>
-    <b>${h[0]} <span>${h[3]?'AI와 함께':'직접'}</span></b><p>${h[2]}</p></li>`).join('');
+  $('#howSteps').innerHTML=HOW.map(h=>`<li${h[3]?' class="is-ai"':''}><small>${h[3]?'AI와 함께':'직접'}</small><b>${h[0]}</b><p>${h[2]}</p></li>`).join('');
   $('#guardList').innerHTML=GUARD.map(g=>`<li><span class="material-icons" aria-hidden="true">${g[0]}</span>${g[1]}</li>`).join('');
 }
 function renderTimeline(){
@@ -2666,7 +2806,7 @@ function renderIntent(){
   });
   $('#intentJump').addEventListener('click',()=>$('#intent').scrollIntoView({behavior:'smooth',block:'start'}));
 }
-renderWins(); renderWork(); renderPhases(); renderTimeline(); renderCases(); renderIntent(); renderPreview();
+renderWins(); renderWork(); renderPhases(); renderHow(); renderTimeline(); renderCases(); renderIntent(); renderPreview();
 document.addEventListener('click',e=>{ const b=e.target.closest('[data-go]'); if(b) go(b.dataset.go); });
 $('#embedDoc').innerHTML='<span class="material-icons" style="font-size:14px">south</span>대시보드 화면 보기';
 document.addEventListener('click',e=>{ if(e.target.closest('.ad-next')) $('#embedBody .screen-frame, #embedBody .hintbox').scrollIntoView({behavior:'smooth',block:'start'}); });
